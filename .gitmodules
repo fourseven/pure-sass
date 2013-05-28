@@ -1,0 +1,3 @@
+[submodule "vendor/upstream/purecss"]
+	path = vendor/upstream/purecss
+	url = git://github.com/yui/pure.git
