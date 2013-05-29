@@ -1,4 +1,6 @@
 require "bundler/gem_tasks"
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
 
 namespace :upstream do
 
@@ -25,3 +27,5 @@ namespace :upstream do
     sh "sass-convert -C -F css -T sass #{t.source.inspect} #{t.name.inspect}"
   end
 end
+
+task :default => [ :spec ]

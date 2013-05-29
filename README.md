@@ -2,23 +2,35 @@
 
 pure-sass is a port of (Yahoo!'s Pure CSS)[http://purecss.io/] framework to SASS.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'pure-sass'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install pure-sass
-
 ## Usage
 
-TODO: Write usage instructions here
+Add pure-sass to your applications `Gemfile`
+
+```ruby
+gem 'pure-sass'
+```
+
+Then in your `app/assets/stylesheets/application.css` you can use
+
+```
+ *= require pure/all
+```
+
+or in your SASS or SCSS files you can use
+
+```sass
+@include 'pure/all'
+```
+
+If you don't want all of Pure then you can manually include
+
+  * `pure/defaults` - default theme
+  * `pure/base` - base styles based on [normalize.css](http://necolas.github.io/normalize.css/)
+  * `pure/buttons` - Pure's button module
+  * `pure/forms` - Pure's form module
+  * `pure/grids` - Pure's grid layout
+  * `pure/menus` - PUre's menu module
+  * `pure/tables` - Pure's table module
 
 ## Contributing
 
