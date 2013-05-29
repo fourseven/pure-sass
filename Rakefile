@@ -12,7 +12,7 @@ namespace :upstream do
   end
 
   def sass_files
-    %w[ all base buttons forms grids menus tables ]
+    %w[ all defaults base buttons forms grids menus tables ]
   end
 
   def generate_top_level_dependencies
@@ -34,7 +34,7 @@ namespace :upstream do
   generate_top_level_dependencies.each do |path|
     file path do
       if File.basename(path) == 'all.css.sass'
-        File.write(path, sass_files.map { |f| "@import \"#{f}\"\n" }.join)
+        File.write(path, (sass_files - ['all']).map { |f| "@import \"#{f}\"\n" }.join)
       else
         dir_path = path.gsub(/\.css\.sass\Z/, '')
         mod = File.basename(dir_path)
