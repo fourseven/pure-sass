@@ -2,6 +2,9 @@ require "pure/sass/version"
 
 module Pure
   module Sass
-    # Your code goes here...
+    if defined? Rails::Engine
+      class Engine < Rails::Engine
+      end
+    end
   end
 end
