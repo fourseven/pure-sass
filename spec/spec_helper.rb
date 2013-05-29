@@ -1,1 +1,2 @@
-require 'sprockets'
+require 'bundler'
+Bundler.require
