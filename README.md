@@ -21,7 +21,7 @@ Then in your `app/assets/stylesheets/application.css` you can use
 or in your SASS or SCSS files you can use
 
 ```sass
-@include 'pure/all'
+@import 'pure/all'
 ```
 
 If you don't want all of Pure then you can manually include
