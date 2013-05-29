@@ -1,6 +1,6 @@
 # Pure::Sass
 
-pure-sass is a port of (Yahoo!'s Pure CSS)[http://purecss.io/] framework to SASS.
+pure-sass is a port of [Yahoo!'s Pure CSS](http://purecss.io/) framework to SASS.
 
 ## Installation
 
