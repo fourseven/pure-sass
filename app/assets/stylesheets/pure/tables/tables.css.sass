@@ -11,14 +11,14 @@
   border-collapse: collapse
   border-spacing: 0
   empty-cells: show
-  border: 1px solid #cbcbcb
+  border: 1px solid $table-border
   caption
-    color: #000
+    color: $table-header-text
     font: italic 85%/1 arial, sans-serif
     padding: 1em 0
     text-align: center
   td, th
-    border-left: 1px solid #cbcbcb
+    border-left: 1px solid $table-border
     /*  inner column border
     border-width: 0 0 0 1px
     font-size: inherit
@@ -30,8 +30,8 @@
   td:first-child, th:first-child
     border-left-width: 0
   thead
-    background: #e0e0e0
-    color: #000
+    background: $table-header-background
+    color: $table-header-text
     text-align: left
     vertical-align: bottom
     white-space: nowrap
@@ -44,7 +44,7 @@
  *   odd  - #edf5ff (light blue)
 
 .pure-table-odd td, .pure-table-striped tr:nth-child(2n-1) td
-  background-color: #f2f2f2
+  background-color: $table-stripe
 
 /* nth-child selector for modern browsers
 
@@ -52,7 +52,7 @@
 
 .pure-table-bordered
   td
-    border-bottom: 1px solid #cbcbcb
+    border-bottom: 1px solid $table-border
   tbody > tr:last-child td
     border-bottom-width: 0
 
@@ -61,7 +61,7 @@
     border-bottom-width: 0
   td, th
     border-width: 0 0 1px 0
-    border-bottom: 1px solid #cbcbcb
+    border-bottom: 1px solid $table-border
   tbody > tr:last-child td
     border-bottom-width: 0
 
