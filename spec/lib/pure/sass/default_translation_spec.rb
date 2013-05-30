@@ -1,10 +1,13 @@
 require 'spec_helper'
 
 describe Pure::Sass::DefaultTranslation do
-  let(:trans) { Object.new.tap { |o| o.extend Pure::Sass::DefaultTranslation} }
+  let(:trans) { Pure::Sass::DefaultTranslation.new }
   subject { trans }
 
   it { should respond_to(:yuiCssPrefix) }
+  it { should respond_to(:prefix) }
+  it { should respond_to(:skinName) }
+
 
   describe "#method_missing" do
     context "when calling #iCantBelieveThisWorksYo" do

@@ -1,16 +1,23 @@
-module Pure::Sass::DefaultTranslation
+module Pure::Sass
+  class DefaultTranslation
 
-  def yuiCssPrefix
-    'pure-'
-  end
+    def yuiCssPrefix
+      '.pure-'
+    end
+    alias_method :prefix, :yuiCssPrefix
 
-  def method_missing(method, *args)
-    "$#{dasherize(method)}"
-  end
+    def skinName
+      "default"
+    end
 
-  private
+    def method_missing(method, *args)
+      "$#{dasherize(method)}"
+    end
 
-  def dasherize(str)
-    str.to_s.gsub(/(.)([A-Z])/,'\1-\2').downcase
+    private
+
+    def dasherize(str)
+      str.to_s.gsub(/(.)([A-Z])/,'\1-\2').downcase
+    end
   end
 end

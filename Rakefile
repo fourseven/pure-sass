@@ -1,6 +1,7 @@
 require "bundler/gem_tasks"
 require 'rspec/core/rake_task'
 require 'nokogiri'
+require 'pure/sass'
 
 RSpec::Core::RakeTask.new(:spec)
 
@@ -24,6 +25,10 @@ namespace :website do
     end
   end
 
+  rule ".scss" => ".handlebars" do |task|
+    Pure::Sass::Translation.new(task.source).render(task.name)
+  end
+
   def generate_dependencies(file_extension)
     template_files.map { |f| "app/assets/stylesheets/pure/#{f}.css.#{file_extension}" }
   end
@@ -35,6 +40,9 @@ namespace :website do
 
   desc "Templates"
   task :templates => generate_dependencies("handlebars")
+
+  desc "SCSS"
+  task :scss => generate_dependencies("scss")
 end
 
 namespace :upstream do
