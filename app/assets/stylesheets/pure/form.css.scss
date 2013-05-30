@@ -1,0 +1,362 @@
+
+/*! Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+/* This page lists core form styles adopted from Normalize.css. */
+/*! Copyright (c) Nicolas Gallagher and Jonathan Neal */
+
+/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
+
+/* This page has Normalize.css form-specific style rules applied to a .yui3-form context */
+
+/* ==========
+Forms Core
+=========*/
+
+
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+
+.pure-default .pure-form {
+    margin: 0;
+}
+
+/* Define consistent border, margin, and padding.*/
+ 
+
+.pure-default .pure-form fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+
+.pure-default .pure-form legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+
+.pure-default .pure-form button,
+.pure-default .pure-form input,
+.pure-default .pure-form select,
+.pure-default .pure-form textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+.pure-default .pure-form button,
+.pure-default .pure-form input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+.pure-default .pure-form button,
+.pure-default .pure-form input[type="button"], /* 1 */
+.pure-default .pure-form input[type="reset"],
+.pure-default .pure-form input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+
+.pure-default .pure-form button[disabled],
+.pure-default .pure-form input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+.pure-default .pure-form input[type="checkbox"],
+.pure-default .pure-form input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+.pure-default .pure-form input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+.pure-default .pure-form input[type="search"]::-webkit-search-cancel-button,
+.pure-default .pure-form input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+
+.pure-default .pure-form button::-moz-focus-inner,
+.pure-default .pure-form input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+
+.pure-default .pure-form textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+/* ===============  forms-responsive.css ================
+
+=========================================================*/
+@media only screen and (max-width : 480px) {
+    .pure-default .pure-form button[type='submit'] {
+    margin: 0.7em 0 0;
+    }
+
+    .pure-default .pure-form input[type='text'], .pure-default .pure-form button, .pure-default .pure-form label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+    
+    .yui3-group input[type='text'] {
+        margin-bottom: 0;
+    }
+
+    .pure-default .pure-form-aligned .pure-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .pure-default .pure-form-aligned .pure-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    .pure-default .pure-form .pure-help-inline {
+        display: block;
+        font-size: 80%;
+        padding: 0.2em 0 0.8em; /* increased bottom padding to make it group with its related input element */
+    }
+}
+
+/* ===============  forms.css ================
+
+=========================================================*/
+.pure-default .pure-form input,
+.pure-default .pure-form select {
+  padding: ;
+  display: inline-block;
+  border: 1px solid ;
+  font-size: 0.8em;
+  box-shadow: inset 0 1px 3px ;
+  border-radius: ;
+  -webkit-transition: 0.3s linear border;
+  -moz-transition: 0.3s linear border;
+  -ms-transition: 0.3s linear border;
+  -o-transition: 0.3s linear border;
+  transition: 0.3s linear border;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pure-default .pure-form input:focus,
+.pure-default .pure-form select:focus {
+  outline: 0;
+  outline: thin dotted \9; /* IE6-9 */
+  border-color: #129FEA;
+}
+.pure-default .pure-form .pure-checkbox,
+.pure-default .pure-form .pure-radio {
+  margin: 0.5em 0;
+  display: block;
+}
+.pure-default .pure-form input[disabled],
+.pure-default .pure-form select[disabled],
+.pure-default .pure-form textarea[disabled],
+.pure-default .pure-form input[readonly],
+.pure-default .pure-form select[readonly],
+.pure-default .pure-form textarea[readonly] {
+  cursor: not-allowed;
+  box-shadow: inset 0 1px 10px ;
+  background-color: #fff;
+  color: ;
+  border-color: ;
+}
+.pure-default .pure-form input:focus:invalid,
+.pure-default .pure-form textarea:focus:invalid,
+.pure-default .pure-form select:focus:invalid {
+  color: #b94a48;
+  border: 1px solid #ee5f5b;
+}
+.pure-default .pure-form input:focus:invalid:focus,
+.pure-default .pure-form textarea:focus:invalid:focus,
+.pure-default .pure-form select:focus:invalid:focus {
+  border-color: #e9322d;
+}
+.pure-default .pure-form select {
+  border: 1px solid ;
+  background-color: white;
+}
+.pure-default .pure-form select[multiple] {
+  height: auto;
+}
+.pure-default .pure-form label {
+  margin: 0.5em 0 0.2em;
+  color: ;
+  font-size:90%;
+}
+.pure-default .pure-form fieldset {
+  margin: 0;
+  padding: 0.35em 0 0.75em;
+  border: 0;
+}
+.pure-default .pure-form legend {
+  display: block;
+  width: 100%;
+  padding: 0.3em 0;
+  margin-bottom: 0.3em;
+  font-size: 125%;
+  color: ;
+  border-bottom: 1px solid ;
+}
+
+.pure-default .pure-form.pure-form-stacked input[type='text'], 
+.pure-default .pure-form.pure-form-stacked select, 
+.pure-default .pure-form.pure-form-stacked label {
+  display: block;
+}
+
+.pure-default .pure-form-aligned input,
+.pure-default .pure-form-aligned textarea,
+.pure-default .pure-form-aligned select,
+.pure-default .pure-form-aligned .pure-help-inline {
+  display: inline-block;
+  *display: inline; /* IE7 inline-block hack */
+  *zoom: 1;
+  vertical-align: middle;
+}
+
+/* aligned Forms */
+.pure-default .pure-form-aligned .pure-control-group {
+  margin-bottom: 0.5em;
+}
+.pure-default .pure-form-aligned .pure-control-group label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em 0 0;
+}
+.pure-default .pure-form-aligned .pure-controls {
+  margin: 1.5em 0 0 10em;
+}
+
+/* Rounded Inputs */
+.pure-default .pure-form .pure-input-rounded {
+  border-radius: ;
+  padding-left: 1em;
+}
+
+/* Grouped Inputs */
+.pure-default .pure-form .pure-group fieldset {
+  margin-bottom: 10px;
+}
+.pure-default .pure-form .pure-group input {
+  display: block;
+  padding: ;
+  margin: 0;
+  border-radius: 0;
+  position: relative;
+  top: -1px;
+}
+.pure-default .pure-form .pure-group input:focus {
+  z-index: 2;
+}
+.pure-default .pure-form .pure-group input:first-child {
+  top: 1px;
+  border-radius: ;
+}
+.pure-default .pure-form .pure-group input:last-child {
+  top: -2px;
+  border-radius: ;
+}
+.pure-default .pure-form .pure-group button {
+  margin: 0.35em 0;
+}
+
+.pure-default .pure-form .pure-input-1 {
+  width: 100%;
+}
+.pure-default .pure-form .pure-input-2-3 {
+  width: 66%;
+}
+.pure-default .pure-form .pure-input-1-2 {
+  width: 50%;
+}
+.pure-default .pure-form .pure-input-1-3 {
+  width: 33%;
+}
+.pure-default .pure-form .pure-input-1-4 {
+  width: 25%;
+}
+
+/* Inline help for forms */
+.pure-default .pure-form .pure-help-inline {
+  display: inline-block;
+  padding-left: 0.3em;
+  color: ;
+  font-size:90%;
+  vertical-align: middle;
+}

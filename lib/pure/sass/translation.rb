@@ -3,7 +3,6 @@ require 'flavour_saver'
 module Pure
   module Sass
     class Translation
-      include DefaultTranslation
 
       attr_accessor :path
 
@@ -18,7 +17,7 @@ module Pure
       end
 
       def context
-        self
+        DefaultTranslation.new
       end
 
     end
