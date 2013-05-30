@@ -23,9 +23,10 @@ Gem::Specification.new do |spec|
     spec.add_dependency gem
   end
 
-  %w[ rake rspec guard guard-rspec guard-sass guard-bundler ].each do |gem|
+  %w[ rake rspec guard guard-rspec guard-sass guard-bundler nokogiri ].each do |gem|
     spec.add_development_dependency gem
   end
   spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "flavour_saver", "~> 0.3.1"
   spec.add_development_dependency "sprockets", "~> 2.0"
 end

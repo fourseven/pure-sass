@@ -1,6 +1,41 @@
 require "bundler/gem_tasks"
 require 'rspec/core/rake_task'
+require 'nokogiri'
+
 RSpec::Core::RakeTask.new(:spec)
+
+namespace :website do
+  desc "Scrape the pure website for tempates"
+  task :scrape do
+    dir = Dir.mktmpdir
+    sh("wget -O #{dir}/index.html http://yui.github.io/skinbuilder/?mode=pure")
+    @outfile = "#{dir}/index.html"
+  end
+
+  def template_files
+    %w[ form buttons table list ]
+  end
+
+  template_files.each do |template|
+    file "app/assets/stylesheets/pure/#{template}.css.handlebars" => :scrape do |task|
+      File.open(task.name, 'w') do |file|
+        file.write(extract_template(template))
+      end
+    end
+  end
+
+  def generate_dependencies(file_extension)
+    template_files.map { |f| "app/assets/stylesheets/pure/#{f}.css.#{file_extension}" }
+  end
+
+  def extract_template(name)
+    doc = Nokogiri::HTML(File.read(@outfile))
+    doc.css("##{name}-template").first.content
+  end
+
+  desc "Templates"
+  task :templates => generate_dependencies("handlebars")
+end
 
 namespace :upstream do
 
