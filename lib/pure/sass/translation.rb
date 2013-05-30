@@ -1,9 +1,9 @@
-require 'tilt'
 require 'flavour_saver'
 
 module Pure
   module Sass
     class Translation
+      include DefaultTranslation
 
       attr_accessor :path
 
@@ -12,21 +12,13 @@ module Pure
       end
 
       def render(destination)
-        File.write destination, tiltify.render(context)
+        r = FS.evaluate(File.read(path), context)
+        puts r
+        File.write destination, r
       end
 
       def context
-        raise "subclass me please"
-      end
-
-      private
-
-      def open_template
-        File.read path
-      end
-
-      def tiltify
-        Tilt.new open_template
+        self
       end
 
     end

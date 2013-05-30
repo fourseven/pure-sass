@@ -8,9 +8,13 @@ describe Pure::Sass::Translation do
 
   it { should respond_to(:path) }
   it { should respond_to(:render) }
+  its('class.ancestors') { should include(Pure::Sass::DefaultTranslation) }
 
-  describe "#context" do
-    specify { expect { subject.context }.to raise_error(/subclass me please/) }
+  describe 'rendering' do
+    let(:fixture) { File.expand_path("../../../../fixtures/buttons.css.handlebars", __FILE__) }
+    let(:output) { Tempfile.new(['foo', 'scss']).path }
+
+    subject { Pure::Sass::Translation.new(fixture).render(output) }
+    specify { expect { subject }.not_to raise_error }
   end
-
 end
