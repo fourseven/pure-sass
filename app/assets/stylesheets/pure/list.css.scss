@@ -34,7 +34,7 @@
     display: block;
     color: inherit;
     line-height: 1.5em;
-    padding: ;
+    padding: $menu-item-padding;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -53,7 +53,7 @@
     vertical-align: middle;
 }
 
-.pure-default .pure-menu li a { ; }
+.pure-default .pure-menu li a { $menu-item-padding; }
 
 .pure-default .pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
@@ -68,7 +68,7 @@
 }
 
 .pure-default .pure-menu-separator {
-    background-color: ;
+    background-color: $separator;
     display: block;
     height: 1px;
     font-size: 0;
@@ -136,10 +136,10 @@
     /*color: #C0C1C3; allow yui3-button to color text*/
 }
 .pure-default .pure-paginator .prev {
-    border-radius: ;
+    border-radius: $paginator-radius-prev;
 }
 .pure-default .pure-paginator .next {
-    border-radius: ;
+    border-radius: $paginator-radius-next;
 }
 /* end from YUICSS list-paginator.css ******************************/
 /* from YUICSS list.css *******************************************/
@@ -147,9 +147,9 @@
 
 .pure-default .pure-menu.pure-menu-open,
 .pure-default .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: ; /* Old browsers */
-    border-radius: ;
-    border: 1px solid ;
+    background: $menu-background; /* Old browsers */
+    border-radius: $border-radius;
+    border: 1px solid $menu-border;
 }
 
 /* remove borders for horizontal menus */
@@ -170,24 +170,24 @@
 
 .pure-default .pure-menu a,
 .pure-default .pure-menu .pure-menu-can-have-children > li:after {
-    color: ;
+    color: $menu-text;
 }
 
 .pure-default .pure-menu .pure-menu-can-have-children > li:hover:after {
-    color: ;
+    color: $menu-hover-text;
 }
 
 
 
 /* HOVER STATES */
 .pure-default .pure-menu li a:hover {
-    background: ;
+    background: $menu-hover-background;
 }
 
 /* DISABLED STATES */
 .pure-default .pure-menu li.pure-menu-disabled a:hover {
-    background: ;
-    color: ;
+    background: $menu-background;
+    color: $menu-text-disabled;
 }
 
 .pure-default .pure-menu .pure-menu-disabled > a {
@@ -198,12 +198,12 @@
 
 .pure-default .pure-menu .pure-menu-disabled > a,
 .pure-default .pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
-    color: ;
+    color: $menu-text-disabled;
 }
 
 /* HEADINGS */
 .pure-default .pure-menu .pure-menu-heading {
-    color: ;
+    color: $heading-text;
     text-transform: uppercase;
     font-size:90%;
     margin-top:0.5em;
@@ -212,14 +212,14 @@
 
 /* SELECTED MENU ITEM */
 .pure-default .pure-menu li.pure-menu-selected a {
-    background-color: ;
-    color: ;
+    background-color: $menu-selected-background;
+    color: $menu-selected-text;
 }
 
 /* FIXED MENU */
 .pure-default .pure-menu.pure-menu-open.pure-menu-fixed {
     border: none;
-    border-bottom: 1px solid ;
+    border-bottom: 1px solid $fixed-menu-border-bottom;
 }
 /* end from YUICSS list.css ***********************************/
 /* from YUICSS list-responsive.css ****************************/

@@ -32,14 +32,14 @@ a:focus {
     font-size: 100%;
     *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
     *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
-    padding: ;
-    color: ; /* rgba not supported (IE 8) */
+    padding: $padding;
+    color: $text; /* rgba not supported (IE 8) */
     /* color: rgba(0, 0, 0, 0.80); rgba supported */
     /* *color: #444; IE 6 & 7 */
-    border: 1px solid ; /*IE 6/7/8*/
+    border: 1px solid $border-low; /*IE 6/7/8*/
     border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
-    background-color: ;
-    border-radius: ;
+    background-color: $background;
+    border-radius: $button-radius;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     /* Transitions */
@@ -100,8 +100,8 @@ a:focus {
 .pure-button-selected,
 a.pure-button-primary,
 a.pure-button-selected {
-    background-color: ;
-    color: ;
+    background-color: $selected-background;
+    color: $selected-text;
 }
 
 .pure-button:-moz-focusring {

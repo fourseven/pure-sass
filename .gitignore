@@ -17,4 +17,4 @@ test/tmp
 test/version_tmp
 tmp
 
-*.handlebars
+app/assets/**/*.handlebars

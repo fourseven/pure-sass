@@ -14,6 +14,10 @@ module Pure::Sass
       "$#{dasherize(method)}"
     end
 
+    def respond_to?(method_name)
+      true
+    end
+
     private
 
     def dasherize(str)

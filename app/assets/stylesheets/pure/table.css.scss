@@ -5,11 +5,11 @@
     border-collapse: separate;
     border-spacing: 0;
     empty-cells: show;
-    border: 1px solid ;
+    border: 1px solid $border;
 }
 
 .pure-default .pure-table caption {
-    color: ;
+    color: $caption-text;
     font: italic 85%/1 arial, sans-serif;
     padding: 1em 0;
     text-align: center;
@@ -17,12 +17,12 @@
 
 .pure-default .pure-table td,
 .pure-default .pure-table th {
-    border-left: 1px solid ;/* inner column border */
+    border-left: 1px solid $border;/* inner column border */
     border-width: 0 0 0 1px;
     font-size: inherit;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
-    padding: ; /* cell padding */
+    padding: $cell-padding; /* cell padding */
 }
 
 .pure-default .pure-table td:first-child,
@@ -31,8 +31,8 @@
 }
 
 .pure-default .pure-table thead {
-    background-color: ;
-    color: ;
+    background-color: $head-background;
+    color: $head-text;
     text-align: left;
     vertical-align: bottom;
     white-space: nowrap;
@@ -44,17 +44,17 @@ even - #fff (white)
 odd - #edf5ff (light blue)
 */
 .pure-default .pure-table td {
-    background-color: ;
-    color: ;
+    background-color: $cell-background;
+    color: $cell-text;
 }
 .pure-default .pure-table-odd td {
-    background-color: ;
-    color: ;
+    background-color: $cell-odd-background;
+    color: $cell-odd-text;
 }
 
 /* BORDERED TABLES */
 .pure-default .pure-table-bordered td {
-    border-bottom:1px solid ;
+    border-bottom:1px solid $border;
 }
 .pure-default .pure-table-bordered tbody > tr:last-child td,
 .pure-default .pure-table-horizontal tbody > tr:last-child td {
@@ -65,7 +65,7 @@ odd - #edf5ff (light blue)
 .pure-default .pure-table-horizontal td,
 .pure-default .pure-table-horizontal th {
     border-width: 0 0 1px 0;
-    border-bottom:1px solid ;
+    border-bottom:1px solid $border;
 }
 .pure-default .pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;

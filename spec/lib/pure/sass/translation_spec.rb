@@ -8,7 +8,6 @@ describe Pure::Sass::Translation do
 
   it { should respond_to(:path) }
   it { should respond_to(:render) }
-  its('class.ancestors') { should include(Pure::Sass::DefaultTranslation) }
 
   describe 'rendering' do
     let(:fixture) { File.expand_path("../../../../fixtures/buttons.css.handlebars", __FILE__) }

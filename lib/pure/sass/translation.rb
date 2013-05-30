@@ -11,9 +11,7 @@ module Pure
       end
 
       def render(destination)
-        r = FS.evaluate(File.read(path), context)
-        puts r
-        File.write destination, r
+        File.write destination, FS.evaluate(File.read(path), context)
       end
 
       def context
