@@ -4,6 +4,15 @@ pure-sass is a port of [Yahoo!'s Pure CSS](http://purecss.io/) framework to SASS
 
 [![Build Status](https://travis-ci.org/jamesotron/pure-sass.png?branch=master)](https://travis-ci.org/jamesotron/pure-sass)
 
+## Plea
+
+To be honest, I don't really know that much about CSS, I just wanted this Gem to exist so that I
+could use it on a project.  I will gladly accept almost any contribution to help with maintaining
+this Gem and will give commit rights to anyone who asks for it.
+
+In the long run, I expect that maintainership will be handed to someone else, but I'm happy to
+incubate it here for now.
+
 ## Usage
 
 Add pure-sass to your applications `Gemfile`
