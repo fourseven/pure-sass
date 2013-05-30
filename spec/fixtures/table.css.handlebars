@@ -1,0 +1,72 @@
+
+/* foundational CSS */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: separate;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid {{border}};
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table caption {
+    color: {{captionText}};
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table td,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table th {
+    border-left: 1px solid {{border}};/* inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: {{cellPadding}}; /* cell padding */
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table td:first-child,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table th:first-child {
+    border-left-width: 0;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table thead {
+    background-color: {{headBackground}};
+    color: {{headText}};
+    text-align: left;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+/*
+striping:
+even - #fff (white)
+odd - #edf5ff (light blue)
+*/
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table td {
+    background-color: {{cellBackground}};
+    color: {{cellText}};
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-odd td {
+    background-color: {{cellOddBackground}};
+    color: {{cellOddText}};
+}
+
+/* BORDERED TABLES */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-bordered td {
+    border-bottom:1px solid {{border}};
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-bordered tbody > tr:last-child td,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-horizontal tbody > tr:last-child td {
+    border-bottom-width: 0;
+}
+
+/* HORIZONTAL BORDERED TABLES */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-horizontal td,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom:1px solid {{border}};
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}table-horizontal tbody > tr:last-child td {
+    border-bottom-width: 0;
+}
