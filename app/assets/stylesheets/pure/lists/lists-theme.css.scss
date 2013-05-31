@@ -1,17 +1,17 @@
 
 /* from YUICSS list-core.css */
-.pure-default .pure-menu ul {
+.pure-menu ul {
     position: absolute;
     visibility: hidden;
 }
 
-.pure-default .pure-menu.pure-menu-open {
+.pure-menu.pure-menu-open {
     visibility: visible;
     z-index: 2;
     width: 100%;
 }
 
-.pure-default .pure-menu ul {
+.pure-menu ul {
     left: -10000px;
     list-style: none;
     margin: 0;
@@ -20,17 +20,17 @@
     z-index: 1;
 }
 
-.pure-default .pure-menu > ul { position: relative; }
+.pure-menu > ul { position: relative; }
 
-.pure-default .pure-menu-open > ul {
+.pure-menu-open > ul {
     left: 0;
     top: 0;
     visibility: visible;
 }
 
-.pure-default .pure-menu li { position: relative; }
+.pure-menu li { position: relative; }
 
-.pure-default .pure-menu a, .pure-default .pure-menu .pure-menu-heading {
+.pure-menu a, .pure-menu .pure-menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -39,23 +39,23 @@
     white-space: nowrap;
 }
 
-.pure-default .pure-menu.pure-menu-horizontal > .pure-menu-heading {
+.pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
     margin: 0;
     zoom: 1;
     *display: inline;
     vertical-align: middle;
 }
-.pure-default .pure-menu.pure-menu-horizontal > ul {
+.pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
     zoom: 1;
     *display: inline;
     vertical-align: middle;
 }
 
-.pure-default .pure-menu li a { $menu-item-padding; }
+.pure-menu li a { $menu-item-padding; }
 
-.pure-default .pure-menu-can-have-children > .pure-menu-label:after {
+.pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
     float: right;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
@@ -63,11 +63,11 @@
     margin-top: -1px;
 }
 
-.pure-default .pure-menu-can-have-children > .pure-menu-label {
+.pure-menu-can-have-children > .pure-menu-label {
     padding-right:30px;
 }
 
-.pure-default .pure-menu-separator {
+.pure-menu-separator {
     background-color: $separator;
     display: block;
     height: 1px;
@@ -76,10 +76,10 @@
     overflow: hidden;
 }
 
-.pure-default .pure-menu-hidden { display: none; }
+.pure-menu-hidden { display: none; }
 
 /* FIXED MENU */
-.pure-default .pure-menu-fixed {
+.pure-menu-fixed {
     position: fixed;
     top:0;
     left:0;
@@ -90,7 +90,7 @@
 /* HORIZONTAL MENU CODE */
 
 /* Initial menus should be inline-block so that they are horizontal */
-.pure-default .pure-menu-horizontal li {
+.pure-menu-horizontal li {
     display: inline-block;
     zoom: 1;
     *display: inline;
@@ -98,62 +98,62 @@
 }
 
 /* Submenus should still be display:block; */
-.pure-default .pure-menu-horizontal li li {
+.pure-menu-horizontal li li {
     display: block;
 }
 
 /* Content after should be down arrow */
-.pure-default .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
+.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
     content: "\25BE";
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
-.pure-default .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
+.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
     padding-right:30px;
 }/* end from yuicss/list-core.css *******************************************/
 /* from yuicss list-paginator.css */
-.pure-default .pure-paginator {
+.pure-paginator {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.pure-default .pure-paginator li {
+.pure-paginator li {
     display: inline-block;
     *display: inline;
     /* IE 7 inline-block hack */
     *zoom: 1;
     margin: 0 -0.35em 0 0;
 }
-.pure-default .pure-paginator .pure-button {
+.pure-paginator .pure-button {
     border-radius: 0;
     padding: 0.8em 1.4em;
     vertical-align: top;
     height: 1.1em;
 }
-.pure-default .pure-paginator .pure-button:focus {
+.pure-paginator .pure-button:focus {
     outline-style: none;
 }
-.pure-default .pure-paginator .prev, .pure-default .pure-paginator .next {
+.pure-paginator .prev, .pure-paginator .next {
     /*color: #C0C1C3; allow yui3-button to color text*/
 }
-.pure-default .pure-paginator .prev {
+.pure-paginator .prev {
     border-radius: $paginator-radius-prev;
 }
-.pure-default .pure-paginator .next {
+.pure-paginator .next {
     border-radius: $paginator-radius-next;
 }
 /* end from YUICSS list-paginator.css ******************************/
 /* from YUICSS list.css *******************************************/
 /* MAIN MENU STYLING */
 
-.pure-default .pure-menu.pure-menu-open,
-.pure-default .pure-menu.pure-menu-horizontal li .pure-menu-children {
+.pure-menu.pure-menu-open,
+.pure-menu.pure-menu-horizontal li .pure-menu-children {
     background: $menu-background; /* Old browsers */
     border-radius: $border-radius;
     border: 1px solid $menu-border;
 }
 
 /* remove borders for horizontal menus */
-.pure-default .pure-menu.pure-menu-horizontal {
+.pure-menu.pure-menu-horizontal {
     border: none;
 }
 
@@ -161,48 +161,48 @@
 
 /* LINK STYLES */
 
-.pure-default .pure-menu a {
+.pure-menu a {
     border: 1px solid transparent;
     border-left: none;
     border-right: none;
 
 }
 
-.pure-default .pure-menu a,
-.pure-default .pure-menu .pure-menu-can-have-children > li:after {
+.pure-menu a,
+.pure-menu .pure-menu-can-have-children > li:after {
     color: $menu-text;
 }
 
-.pure-default .pure-menu .pure-menu-can-have-children > li:hover:after {
+.pure-menu .pure-menu-can-have-children > li:hover:after {
     color: $menu-hover-text;
 }
 
 
 
 /* HOVER STATES */
-.pure-default .pure-menu li a:hover {
+.pure-menu li a:hover {
     background: $menu-hover-background;
 }
 
 /* DISABLED STATES */
-.pure-default .pure-menu li.pure-menu-disabled a:hover {
+.pure-menu li.pure-menu-disabled a:hover {
     background: $menu-background;
     color: $menu-text-disabled;
 }
 
-.pure-default .pure-menu .pure-menu-disabled > a {
+.pure-menu .pure-menu-disabled > a {
     background-image: none;
     border-color: transparent;
     cursor: default;
 }
 
-.pure-default .pure-menu .pure-menu-disabled > a,
-.pure-default .pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
+.pure-menu .pure-menu-disabled > a,
+.pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
     color: $menu-text-disabled;
 }
 
 /* HEADINGS */
-.pure-default .pure-menu .pure-menu-heading {
+.pure-menu .pure-menu-heading {
     color: $heading-text;
     text-transform: uppercase;
     font-size:90%;
@@ -211,13 +211,13 @@
 
 
 /* SELECTED MENU ITEM */
-.pure-default .pure-menu li.pure-menu-selected a {
+.pure-menu li.pure-menu-selected a {
     background-color: $menu-selected-background;
     color: $menu-selected-text;
 }
 
 /* FIXED MENU */
-.pure-default .pure-menu.pure-menu-open.pure-menu-fixed {
+.pure-menu.pure-menu-open.pure-menu-fixed {
     border: none;
     border-bottom: 1px solid $fixed-menu-border-bottom;
 }
@@ -227,11 +227,11 @@
 
 @media (max-width: 480px) {
 
-    .pure-default .pure-menu-horizontal {
+    .pure-menu-horizontal {
         width:100%;
     }
 
-    .pure-default .pure-menu-children li {
+    .pure-menu-children li {
         display: block;
         border-bottom:1px solid block;
     }

@@ -1,6 +1,6 @@
 
 /* foundational CSS */
-.pure-default .pure-table {
+.pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
     border-collapse: separate;
     border-spacing: 0;
@@ -8,15 +8,15 @@
     border: 1px solid $border;
 }
 
-.pure-default .pure-table caption {
+.pure-table caption {
     color: $caption-text;
     font: italic 85%/1 arial, sans-serif;
     padding: 1em 0;
     text-align: center;
 }
 
-.pure-default .pure-table td,
-.pure-default .pure-table th {
+.pure-table td,
+.pure-table th {
     border-left: 1px solid $border;/* inner column border */
     border-width: 0 0 0 1px;
     font-size: inherit;
@@ -25,12 +25,12 @@
     padding: $cell-padding; /* cell padding */
 }
 
-.pure-default .pure-table td:first-child,
-.pure-default .pure-table th:first-child {
+.pure-table td:first-child,
+.pure-table th:first-child {
     border-left-width: 0;
 }
 
-.pure-default .pure-table thead {
+.pure-table thead {
     background-color: $head-background;
     color: $head-text;
     text-align: left;
@@ -43,30 +43,30 @@ striping:
 even - #fff (white)
 odd - #edf5ff (light blue)
 */
-.pure-default .pure-table td {
+.pure-table td {
     background-color: $cell-background;
     color: $cell-text;
 }
-.pure-default .pure-table-odd td {
+.pure-table-odd td {
     background-color: $cell-odd-background;
     color: $cell-odd-text;
 }
 
 /* BORDERED TABLES */
-.pure-default .pure-table-bordered td {
+.pure-table-bordered td {
     border-bottom:1px solid $border;
 }
-.pure-default .pure-table-bordered tbody > tr:last-child td,
-.pure-default .pure-table-horizontal tbody > tr:last-child td {
+.pure-table-bordered tbody > tr:last-child td,
+.pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;
 }
 
 /* HORIZONTAL BORDERED TABLES */
-.pure-default .pure-table-horizontal td,
-.pure-default .pure-table-horizontal th {
+.pure-table-horizontal td,
+.pure-table-horizontal th {
     border-width: 0 0 1px 0;
     border-bottom:1px solid $border;
 }
-.pure-default .pure-table-horizontal tbody > tr:last-child td {
+.pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;
 }

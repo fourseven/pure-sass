@@ -11,7 +11,8 @@ module Pure
       end
 
       def render(destination)
-        File.write destination, FS.evaluate(File.read(path), context)
+        scss_output = FS.evaluate(File.read(path), context)
+        File.write destination, scss_output.gsub(/#{context.prefix}#{context.skinName} ?/, "")
       end
 
       def context

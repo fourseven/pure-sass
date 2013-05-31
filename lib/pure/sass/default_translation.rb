@@ -6,8 +6,9 @@ module Pure::Sass
     end
     alias_method :prefix, :yuiCssPrefix
 
+    # We are currently regex'ing this out.
     def skinName
-      "default"
+      "IM_GONNA_CUT_YOU_SO_BAD_YOU_GONNA_WISH_I_DIDNT_CUT_YOU_SO_BAD"
     end
 
     def method_missing(method, *args)
