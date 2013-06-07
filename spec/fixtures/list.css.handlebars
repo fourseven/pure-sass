@@ -1,0 +1,241 @@
+
+/* from YUICSS list-core.css */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-open {
+    visibility: visible;
+    z-index: 2;
+    width: 100%;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu ul {
+    left: -10000px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: -10000px;
+    z-index: 1;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu > ul { position: relative; }
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-open > ul {
+    left: 0;
+    top: 0;
+    visibility: visible;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu li { position: relative; }
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu a, {{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-heading {
+    display: block;
+    color: inherit;
+    line-height: 1.5em;
+    padding: {{menuItemPadding}};
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-horizontal > {{yuiCssPrefix}}menu-heading {
+    display: inline-block;
+    margin: 0;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-horizontal > ul {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu li a { {{menuItemPadding}}; }
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-can-have-children > {{yuiCssPrefix}}menu-label:after {
+    content: '\25B8';
+    float: right;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
+    margin-right: -20px;
+    margin-top: -1px;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-can-have-children > {{yuiCssPrefix}}menu-label {
+    padding-right:30px;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-separator {
+    background-color: {{separator}};
+    display: block;
+    height: 1px;
+    font-size: 0;
+    margin: 7px 2px;
+    overflow: hidden;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-hidden { display: none; }
+
+/* FIXED MENU */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+
+/* HORIZONTAL MENU CODE */
+
+/* Initial menus should be inline-block so that they are horizontal */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-horizontal li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+/* Submenus should still be display:block; */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-horizontal li li {
+    display: block;
+}
+
+/* Content after should be down arrow */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-horizontal > {{yuiCssPrefix}}menu-children > {{yuiCssPrefix}}menu-can-have-children > {{yuiCssPrefix}}menu-label:after {
+    content: "\25BE";
+}
+/*Add extra padding to elements that have the arrow so that the hover looks nice */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-horizontal > {{yuiCssPrefix}}menu-children > {{yuiCssPrefix}}menu-can-have-children > {{yuiCssPrefix}}menu-label {
+    padding-right:30px;
+}/* end from yuicss/list-core.css *******************************************/
+/* from yuicss list-paginator.css */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator li {
+    display: inline-block;
+    *display: inline;
+    /* IE 7 inline-block hack */
+    *zoom: 1;
+    margin: 0 -0.35em 0 0;
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator {{yuiCssPrefix}}button {
+    border-radius: 0;
+    padding: 0.8em 1.4em;
+    vertical-align: top;
+    height: 1.1em;
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator {{yuiCssPrefix}}button:focus {
+    outline-style: none;
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator .prev, {{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator .next {
+    /*color: #C0C1C3; allow yui3-button to color text*/
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator .prev {
+    border-radius: {{paginatorRadiusPrev}};
+}
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}paginator .next {
+    border-radius: {{paginatorRadiusNext}};
+}
+/* end from YUICSS list-paginator.css ******************************/
+/* from YUICSS list.css *******************************************/
+/* MAIN MENU STYLING */
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-open,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-horizontal li {{yuiCssPrefix}}menu-children {
+    background: {{menuBackground}}; /* Old browsers */
+    border-radius: {{borderRadius}};
+    border: 1px solid {{menuBorder}};
+}
+
+/* remove borders for horizontal menus */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-horizontal {
+    border: none;
+}
+
+
+
+/* LINK STYLES */
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu a {
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu a,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-can-have-children > li:after {
+    color: {{menuText}};
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-can-have-children > li:hover:after {
+    color: {{menuHoverText}};
+}
+
+
+
+/* HOVER STATES */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu li a:hover {
+    background: {{menuHoverBackground}};
+}
+
+/* DISABLED STATES */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu li{{yuiCssPrefix}}menu-disabled a:hover {
+    background: {{menuBackground}};
+    color: {{menuTextDisabled}};
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-disabled > a {
+    background-image: none;
+    border-color: transparent;
+    cursor: default;
+}
+
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-disabled > a,
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-can-have-children{{yuiCssPrefix}}menu-disabled > a:after {
+    color: {{menuTextDisabled}};
+}
+
+/* HEADINGS */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu {{yuiCssPrefix}}menu-heading {
+    color: {{headingText}};
+    text-transform: uppercase;
+    font-size:90%;
+    margin-top:0.5em;
+}
+
+
+/* SELECTED MENU ITEM */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu li{{yuiCssPrefix}}menu-selected a {
+    background-color: {{menuSelectedBackground}};
+    color: {{menuSelectedText}};
+}
+
+/* FIXED MENU */
+{{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu{{yuiCssPrefix}}menu-open{{yuiCssPrefix}}menu-fixed {
+    border: none;
+    border-bottom: 1px solid {{fixedMenuBorderBottom}};
+}
+/* end from YUICSS list.css ***********************************/
+/* from YUICSS list-responsive.css ****************************/
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    {{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-horizontal {
+        width:100%;
+    }
+
+    {{yuiCssPrefix}}{{skinName}} {{yuiCssPrefix}}menu-children li {
+        display: block;
+        border-bottom:1px solid block;
+    }
+
+}
+/* end from list-responsive.css ******************/
+
