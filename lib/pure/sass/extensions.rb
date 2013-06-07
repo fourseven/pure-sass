@@ -8,34 +8,30 @@
 
 module Pure::Sass::Extensions
   def yui_skin_radius(*args)
-    args.map(&method(:computeRadius)).join(" ")
+    args.map { |a| compute_radius(a).to_sass }.join(' ')
   end
 
-  def yui_skin_padding()
-
+  def yui_skin_padding(*args)
+    args.map { |a| compute_padding(a).to_sass }.join(' ')
   end
 
-  def computeRadius(factor = 0.4, val = 10)
-    factor = Sass::Script::Number.new(factor.to_s)
-    val = Sass::Script::Number.new(val.to_s)
-    factor.times(val)
-    # unit = extract_unit(val)
-    # if (unit == "px")
-    #   val = val.to_i
-    # else
-    #   val = val.to_f
-    # end
-    # if (val > 0)
-    #   "#{factor.to_f * val}#{unit}"
-    # else
-    #   "0"
-    # end
+  private
+
+  def compute_radius(factor, val=10)
+    multiply_numbers(factor, val, 'px')
   end
 
-  def extract_unit(val, default_unit = "px")
-    val = Sass::Script::Number.new(val)
-    unit = unit(val)
-    unit = default_unit if unit.value.length == 0
-    unit
+  def compute_padding(factor, val=1)
+    multiply_numbers(factor, val, 'em')
+  end
+
+  private
+
+  def multiply_numbers(factor, val, default_units=nil)
+    factor = Sass::Script::Number.new(factor) unless factor.respond_to? :value
+    val    = Sass::Script::Number.new(val)    unless val.respond_to? :value
+    result = Sass::Script::Number.new(factor.value * val.value, factor.numerator_units, val.denominator_units)
+    result = result.coerce([default_units], []) if result.unitless? && default_units
+    result
   end
 end
