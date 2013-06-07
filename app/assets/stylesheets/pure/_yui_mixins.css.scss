@@ -1,0 +1,36 @@
+@function yui-skin-radius($radius) {
+  @return $radius * 10px;
+}
+
+@function yui-background($base) {
+  @return adjust_color($base, $saturation: -30%, $lightness: -90%);
+}
+
+// Standard yui adjustments for text
+@function yui-text-low($base) {
+  @return adjust_color($base, $lightness: 20% * $text-contrast);
+}
+@function yui-text-normal($base) {
+  @return adjust_color($base, $lightness: 45% * $text-contrast);
+}
+@function yui-text-high($base) {
+  @return adjust_color($base, $lightness: 50% * $text-contrast);
+}
+
+@function yui-rule-low($base) {
+  @return adjust_color($base, $lightness: -10%);
+}
+@function yui-rule-high($base) {
+  @return adjust_color($base, $lightness: 10%);
+}
+
+@function yui-border-high($base) {
+  @return adjust_color($base, $lightness: 10%);
+}
+@function yui-border-low($base) {
+  @return adjust_color($base, $lightness: -5%);
+}
+
+@function yui-hover-background($base) {
+  @return adjust_color($base, $lightness: 10%);
+}
