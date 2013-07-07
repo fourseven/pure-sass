@@ -1,7 +1,6 @@
 {
   "name": "pure-sass",
   "version": "0.0.3",
-  "main": "app/assets/stylesheets/pure/all.css.scss",
   "ignore": [
     "lib",
     "components",
