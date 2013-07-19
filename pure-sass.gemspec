@@ -6,8 +6,8 @@ require 'pure/sass/version'
 Gem::Specification.new do |spec|
   spec.name          = "pure-sass"
   spec.version       = Pure::Sass::VERSION
-  spec.authors       = ["James Harton", "Mathew Hartley"]
-  spec.email         = ["james@resistor.io", "matt@route66.sytes.net"]
+  spec.authors       = ["James Harton", "Mathew Hartley", "John Otander"]
+  spec.email         = ["james@resistor.io", "matt@route66.sytes.net", "johnotander@gmail.com"]
   spec.description   = "Yahoo's purecss ported to SASS"
   spec.summary       = "Yahoo's purecss ported to SASS"
   spec.homepage      = ""
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
     spec.add_dependency gem
   end
 
-  %w[ rake rspec guard guard-rspec guard-sass guard-bundler nokogiri ].each do |gem|
+  %w[ rake rspec guard guard-rspec guard-sass guard-bundler nokogiri fakefs ].each do |gem|
     spec.add_development_dependency gem
   end
   spec.add_development_dependency "bundler", "~> 1.3"
