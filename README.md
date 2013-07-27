@@ -40,7 +40,7 @@ If you don't want all of Pure then you can manually include
   * `pure/buttons` - Pure's button module
   * `pure/forms` - Pure's form module
   * `pure/grids` - Pure's grid layout
-  * `pure/menus` - PUre's menu module
+  * `pure/menus` - Pure's menu module
   * `pure/tables` - Pure's table module
 
 ## Contributing
