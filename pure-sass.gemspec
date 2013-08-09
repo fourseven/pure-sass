@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
 
-  %w[ sass ].each do |gem|
+  %w[ sass thor fileutils ].each do |gem|
     spec.add_dependency gem
   end
 
