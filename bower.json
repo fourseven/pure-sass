@@ -1,0 +1,15 @@
+{
+  "name": "pure-sass",
+  "version": "0.0.3",
+  "ignore": [
+    "lib",
+    "components",
+    "spec",
+    "vendor",
+    "**/.*",
+    "pure-sass.gemspec",
+    "Rakefile",
+    "Gemfile",
+    "Guardfile"
+  ]
+}
