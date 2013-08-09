@@ -22,7 +22,7 @@ module Pure
 
       desc 'version', 'Show Pure-Sass version'
       def version
-        say "Pure-Sass #{ Pure::Sass::VERSION }"
+        puts "Pure-Sass #{ Pure::Sass::VERSION }"
       end
 
       private
