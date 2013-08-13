@@ -1,7 +1,9 @@
+require 'fakefs/spec_helpers'
 require 'spec_helper'
 require 'pure/sass/generator'
 
-describe Pure::Sass::Generator, fakefs: true do
+describe Pure::Sass::Generator do
+  include FakeFS::SpecHelpers
 
   let(:install_path) { File.join(File.dirname(File.dirname(File.dirname(__FILE__))), 'pure') }
   let(:base_scss_files) { ['all', 'base', 'buttons', 'forms', 'grids', 'menus', 'tables'] }
