@@ -2,7 +2,7 @@
 
 pure-sass is a port of [Yahoo!'s Pure CSS](http://purecss.io/) framework to SASS.
 
-[![Build Status](https://travis-ci.org/jamesotron/pure-sass.png?branch=master)](https://travis-ci.org/jamesotron/pure-sass)
+[![Build Status](https://travis-ci.org/fourseven/pure-sass.svg?branch=master)](https://travis-ci.org/fourseven/pure-sass)
 
 ## Plea
 
