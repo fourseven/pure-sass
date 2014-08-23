@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["james@resistor.io", "matt@route66.sytes.net", "johnotander@gmail.com"]
   spec.description   = "Yahoo's purecss ported to SASS"
   spec.summary       = "Yahoo's purecss ported to SASS"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/fourseven/pure-sass"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
     spec.add_dependency gem
   end
 
-  %w[ rake rspec guard guard-rspec guard-sass guard-bundler nokogiri fakefs ].each do |gem|
+  %w[ rake rspec guard guard-rspec guard-sass guard-bundler nokogiri ].each do |gem|
     spec.add_development_dependency gem
   end
   spec.add_development_dependency "bundler", "~> 1.3"
