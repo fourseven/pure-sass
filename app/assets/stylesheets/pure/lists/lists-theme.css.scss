@@ -1,5 +1,8 @@
 
-/* from YUICSS list-core.css */
+/* from PURE menu-core.css */
+/*csslint adjoining-classes:false, outline-none:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/ 
+
 .pure-menu ul {
     position: absolute;
     visibility: hidden;
@@ -28,7 +31,13 @@
     visibility: visible;
 }
 
-.pure-menu li { position: relative; }
+.pure-menu-open > ul:focus {
+    outline: 0;
+}
+
+.pure-menu li {
+    position: relative;
+}
 
 .pure-menu a, .pure-menu .pure-menu-heading {
     display: block;
@@ -41,19 +50,20 @@
 
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
-    margin: 0;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
+    margin: 0;
     vertical-align: middle;
 }
 .pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
+    /* height: 2.4em; removed for Skin Builder */
 }
 
-.pure-menu li a { $menu-item-padding; }
+.pure-menu li a { padding: $menu-item-padding; }
 
 .pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
@@ -64,7 +74,7 @@
 }
 
 .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 .pure-menu-separator {
@@ -76,7 +86,9 @@
     overflow: hidden;
 }
 
-.pure-menu-hidden { display: none; }
+.pure-menu-hidden {
+    display: none;
+}
 
 /* FIXED MENU */
 .pure-menu-fixed {
@@ -92,8 +104,8 @@
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal li {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
 }
 
@@ -108,20 +120,56 @@
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
-}/* end from yuicss/list-core.css *******************************************/
-/* from yuicss list-paginator.css */
+    padding-right: 30px;
+}
+
+/* Adjusting separator for vertical menus */
+.pure-menu-horizontal li.pure-menu-separator {
+    height: 50%;
+    width: 1px;
+    margin: 0 7px;
+}
+
+/* Submenus should be horizontal separator again */
+.pure-menu-horizontal li li.pure-menu-separator {
+height: 1px;
+width: auto;
+margin: 7px 2px;
+}
+
+
+/* end from yuicss/menu-core.css *******************************************/
+/* from yuicss menu-paginator.css */
+/*csslint box-model:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/ 
+
 .pure-paginator {
+
+    /* `pure-g` Grid styles */
+    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+    /* `pure-paginator` Specific styles */
     list-style: none;
     margin: 0;
     padding: 0;
 }
+.opera-only :-o-prefocus,
+.pure-paginator {
+    word-spacing: -0.43em;
+}
+
+/* `pure-u` Grid styles */
 .pure-paginator li {
     display: inline-block;
-    *display: inline;
-    /* IE 7 inline-block hack */
-    *zoom: 1;
-    margin: 0 -0.35em 0 0;
+    *display: inline; /* IE < 8: fake inline-block */
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
 }
 .pure-paginator .pure-button {
     border-radius: 0;
@@ -129,11 +177,13 @@
     vertical-align: top;
     height: 1.1em;
 }
-.pure-paginator .pure-button:focus {
+.pure-paginator .pure-button:focus,
+.pure-paginator .pure-button:active {
     outline-style: none;
 }
-.pure-paginator .prev, .pure-paginator .next {
-    /*color: #C0C1C3; allow yui3-button to color text*/
+.pure-paginator .prev,
+.pure-paginator .next {
+    /*color: #C0C1C3; allow .pure-button to color text*/
 }
 .pure-paginator .prev {
     border-radius: $paginator-radius-prev;
@@ -141,22 +191,23 @@
 .pure-paginator .next {
     border-radius: $paginator-radius-next;
 }
-/* end from YUICSS list-paginator.css ******************************/
-/* from YUICSS list.css *******************************************/
+/* end from PURE menu-paginator.css ******************************/
+/* from PURE menu.css *******************************************/
 /* MAIN MENU STYLING */
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/ 
 
 .pure-menu.pure-menu-open,
 .pure-menu.pure-menu-horizontal li .pure-menu-children {
     background: $menu-background; /* Old browsers */
-    border-radius: $border-radius;
     border: 1px solid $menu-border;
 }
 
 /* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal {
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
     border: none;
 }
-
 
 
 /* LINK STYLES */
@@ -177,15 +228,19 @@
     color: $menu-hover-text;
 }
 
+/* Focus style for a dropdown menu-item when the parent has been opened */
+.pure-menu .pure-menu-open {
+    background: $menu-hover-background;
+}
 
-
-/* HOVER STATES */
-.pure-menu li a:hover {
+.pure-menu li a:hover,
+.pure-menu li a:focus {
     background: $menu-hover-background;
 }
 
 /* DISABLED STATES */
-.pure-menu li.pure-menu-disabled a:hover {
+.pure-menu li.pure-menu-disabled a:hover,
+.pure-menu li.pure-menu-disabled a:focus {
     background: $menu-background;
     color: $menu-text-disabled;
 }
@@ -205,8 +260,9 @@
 .pure-menu .pure-menu-heading {
     color: $heading-text;
     text-transform: uppercase;
-    font-size:90%;
-    margin-top:0.5em;
+    font-size: 90%;
+    margin-top: 0.5em;
+    border-bottom: solid 1px $fixed-menu-border-bottom;
 }
 
 
@@ -221,8 +277,8 @@
     border: none;
     border-bottom: 1px solid $fixed-menu-border-bottom;
 }
-/* end from YUICSS list.css ***********************************/
-/* from YUICSS list-responsive.css ****************************/
+/* end from PURE menu.css ***********************************/
+/* from PURE menu-responsive.css ****************************/
 /* RESPONSIVE */
 
 @media (max-width: 480px) {
@@ -233,9 +289,9 @@
 
     .pure-menu-children li {
         display: block;
-        border-bottom:1px solid block;
+        border-bottom:1px solid $menu-border;
     }
 
 }
-/* end from list-responsive.css ******************/
+/* end from menu-responsive.css ******************/
 
