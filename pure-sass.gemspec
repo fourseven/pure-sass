@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["james@resistor.io", "matt@route66.sytes.net", "johnotander@gmail.com"]
   spec.description   = "Yahoo's purecss ported to SASS"
   spec.summary       = "Yahoo's purecss ported to SASS"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/fourseven/pure-sass"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
