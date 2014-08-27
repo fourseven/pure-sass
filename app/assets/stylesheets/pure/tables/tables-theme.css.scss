@@ -2,7 +2,7 @@
 /* foundational CSS */
 .pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
     border: 1px solid $border;
@@ -35,13 +35,12 @@
     color: $head-text;
     text-align: left;
     vertical-align: bottom;
-    white-space: nowrap;
 }
 
 /*
 striping:
-even - #fff (white)
-odd - #edf5ff (light blue)
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
 */
 .pure-table td {
     background-color: $cell-background;
@@ -52,9 +51,16 @@ odd - #edf5ff (light blue)
     color: $cell-odd-text;
 }
 
+/* nth-child selector for modern browsers */
+.pure-table-striped tr:nth-child(2n-1) td {
+    background-color: $cell-odd-background;
+    color: $cell-odd-text;
+}
+
+
 /* BORDERED TABLES */
 .pure-table-bordered td {
-    border-bottom:1px solid $border;
+    border-bottom: 1px solid $border;
 }
 .pure-table-bordered tbody > tr:last-child td,
 .pure-table-horizontal tbody > tr:last-child td {
