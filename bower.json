@@ -1,0 +1,39 @@
+{
+  "name": "pure-sass",
+  "version": "0.0.5",
+  "homepage": "https://github.com/fourseven/pure-sass",
+  "authors": ["Mathew Hartley"],
+  "description": "Yahoo's Pure CSS library ported to SASS.",
+  "main": [
+    "app/assets/stylesheets/defaults.css.scss",
+    "app/assets/stylesheets/base.css.scss",
+    "app/assets/stylesheets/buttons.css.scss",
+    "app/assets/stylesheets/forms.css.scss",
+    "app/assets/stylesheets/grids.css.scss",
+    "app/assets/stylesheets/menus.css.scss",
+    "app/assets/stylesheets/tables.css.scss"
+  ],
+  "keywords": [
+    "yahoo",
+    "pure",
+    "sass",
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "lib",
+    "spec",
+    "vendor",
+    ".gitignore",
+    ".gitmodules",
+    ".ruby-version",
+    ".travis.yml",
+    "Gemfile",
+    "Guardfile",
+    "LICENSE.txt",
+    "README.md",
+    "Rakefile",
+    "pure-sass.gemspec"
+  ],
+  "dependencies": {}
+}
