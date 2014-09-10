@@ -2,7 +2,7 @@
   "name": "pure-sass",
   "version": "0.0.5",
   "homepage": "https://github.com/fourseven/pure-sass",
-  "authors": ["Mathew Hartley"],
+  "authors": ["Mathew Hartley", "James Harton", "John Otander"],
   "description": "Yahoo's Pure CSS library ported to SASS.",
   "main": [
     "app/assets/stylesheets/defaults.css.scss",
