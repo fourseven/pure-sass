@@ -27,7 +27,7 @@ Then in your `app/assets/stylesheets/application.css` you can use
  *= require pure/all
 ```
 
-or in your SASS or SCSS files you can use
+or in your Sass or SCSS files you can use
 
 ```sass
 @import 'pure/all'

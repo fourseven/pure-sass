@@ -80,7 +80,7 @@ namespace :upstream do
     Dir['vendor/upstream/purecss/src/*/css/**/*.css']
   end
 
-  desc "Import CSS files from upstream and convert them to SASS"
+  desc "Import CSS files from upstream and convert them to Sass"
   task :import => generate_sass_dependencies
 
   task :combine => generate_top_level_dependencies
