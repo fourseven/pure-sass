@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Pure::Sass::VERSION
   spec.authors       = ["James Harton", "Mathew Hartley", "John Otander"]
   spec.email         = ["james@resistor.io", "matt@route66.sytes.net", "johnotander@gmail.com"]
-  spec.description   = "Yahoo's purecss ported to SASS"
-  spec.summary       = "Yahoo's purecss ported to SASS"
+  spec.description   = "Yahoo's purecss ported to Sass"
+  spec.summary       = "Yahoo's purecss ported to Sass"
   spec.homepage      = "https://github.com/fourseven/pure-sass"
   spec.license       = "MIT"
 
